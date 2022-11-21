@@ -77,13 +77,13 @@ int main(int argc, char* argv[]){
 
 
     // Hash address and prefix
-    std::array<uint8_t,32> addr_hash = sha256_hash(sha256_hash(my_address));
+    std::array<uint8_t,32> addr_hash = sha256_hash(sha256_hash(my_2nd_address));
     
     // Append the first 4 bytes of the address hash to the end of the address
     unsigned int addr_checksum;
     std:memcpy(&addr_checksum,&addr_hash[0],4);
     std::array<uint8_t,4> addr_checksum_le = libbitcoin::to_little_endian(addr_checksum);
-    std::copy_n(addr_checksum_le.begin(), 4 ,my_address.begin()+21);
+    std::copy_n(addr_checksum_le.begin(), 4 ,my_2nd_address.begin()+21);
 
 
     std::array<uint8_t,25> ba_address = my_address.to_payment();
