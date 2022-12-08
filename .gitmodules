@@ -1,3 +1,11 @@
 [submodule "jansson"]
 	path = jansson
 	url = https://github.com/akheron/jansson.git
+[submodule "libbitcoin-explorer"]
+	path = libbitcoin-explorer
+	url = https://github.com/libbitcoin/libbitcoin-explorer.git
+	branch = version3
+[submodule "libbitcoin-server"]
+	path = libbitcoin-server
+	url = https://github.com/libbitcoin/libbitcoin-server.git
+	branch = version3
